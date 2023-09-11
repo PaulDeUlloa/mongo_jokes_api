@@ -11,11 +11,13 @@ const JokeSchema = new mongoose.Schema(
       type: String,
       //validations:
       required: [true, "Jokes is Required!"],
+      minlength: [10, "Must be at least 10 characters long"],
     },
     punchline: {
       type: String,
       //validations:
       required: [true, "Punchline is Required!"],
+      minlength: [3, "Must be at least 3 characters long"],
     },
   },
   { timestamps: true } //* This automatically gives us the createdAt and updatedAt columns!

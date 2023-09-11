@@ -5,6 +5,8 @@ const JokeController = require("../controllers/joke.controller");
 module.exports = (app) => {
   //* Get Requests
   app.get("/api/test",JokeController.apiTest);
+
+  app.get("/api/jokes", JokeController.allJoke);
   //* Post Requests
 
   //* Put Requests

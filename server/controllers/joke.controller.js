@@ -13,3 +13,31 @@ module.exports.allJoke = (req, res) => {
     .then(jokeList => res.json(jokeList))
     .catch((err) => res.json(err));
 }
+
+
+module.exports.oneJoke = (req, res) => {
+  Joke.find()
+    .then()
+    .catch((err) => res.json(err));
+}
+
+
+module.exports.createJoke = (req, res) => {
+  Joke.create(req.body)
+    .then((newJoke) => res.json(newJoke))
+    .catch((err) => res.json(err));
+}
+
+
+module.exports.updateJoke = (req, res) => {
+  Joke.find()
+    .then()
+    .catch((err) => res.json(err));
+}
+
+
+module.exports.deleteJoke = (req, res) => {
+  Joke.find()
+    .then()
+    .catch((err) => res.json(err));
+}
