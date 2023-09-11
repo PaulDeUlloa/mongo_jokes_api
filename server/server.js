@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}));
 require("./config/mongoose.config.js");
 
 
-// 3. routes
+// 3. Imports Jokes routes
 require("./routes/joke.routes")(app);
 
 

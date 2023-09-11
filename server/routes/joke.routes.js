@@ -1,4 +1,4 @@
-//! IMport the controller\
+//! Import the controller
 
 const JokeController = require("../controllers/joke.controller");
 
@@ -13,7 +13,7 @@ module.exports = (app) => {
   //* Post Requests
           //! Adds a new joke to the database
   app.post("/api/jokes", JokeController.createJoke);
-  //* Put Requests
+  //* Put/patch Requests
           //! Partially updates an existing Joke with a matching :id
   app.patch("/api/jokes/:id", JokeController.updateJoke);
 
@@ -21,4 +21,3 @@ module.exports = (app) => {
   app.delete("/api/jokes/:id", JokeController.deleteJoke);
 };
 
-//! Import routes to our
