@@ -11,12 +11,14 @@ module.exports = (app) => {
   app.get("/api/jokes/:id", JokeController.oneJoke);
 
   //* Post Requests
+          //! Adds a new joke to the database
   app.post("/api/jokes", JokeController.createJoke);
   //* Put Requests
+          //! Partially updates an existing Joke with a matching :id
   app.patch("/api/jokes/:id", JokeController.updateJoke);
 
   //* Delete Requests
-
+  app.delete("/api/jokes/:id", JokeController.deleteJoke);
 };
 
 //! Import routes to our

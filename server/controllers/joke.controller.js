@@ -12,21 +12,21 @@ module.exports.allJoke = (req, res) => {
   Joke.find()
     .then(jokeList => res.json(jokeList))
     .catch((err) => res.json(err));
-}
+};
 
 
 module.exports.oneJoke = (req, res) => {
   Joke.findOne({ _id : req. params.id })
     .then((oneJoke) => res.json(oneJoke))
     .catch((err) => res.json(err));
-}
+};
 
 
 module.exports.createJoke = (req, res) => {
   Joke.create(req.body)
     .then((newJoke) => res.json(newJoke))
     .catch((err) => res.json(err));
-}
+};
 
 
 module.exports.updateJoke = (req, res) => {
@@ -36,11 +36,11 @@ module.exports.updateJoke = (req, res) => {
   })
     .then((updatedJoke) => res.json(updatedJoke))
     .catch((err) => res.json(err));
-}
+};
 
 
 module.exports.deleteJoke = (req, res) => {
-  Joke.find()
-    .then()
+  Joke.deleteOne({ _id: req.params.id })
+    .then((status) => res.json(status))
     .catch((err) => res.json(err));
-}
+};
